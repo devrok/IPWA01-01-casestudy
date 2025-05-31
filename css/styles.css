@@ -1,0 +1,21 @@
+* {
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header nav {
+    text-align: right;
+    display: inline;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+
+footer nav ul {
+    text-align: center;
+}
+footer nav ul li {
+    list-style-image: none;
+    display: inline;
+}
