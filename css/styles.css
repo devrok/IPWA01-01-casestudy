@@ -1,3 +1,9 @@
+:root {
+    --mainblue: #197170;
+    --maingreen: #429D2E;
+}
+
+
 * {
     /* font-family: Arial, Helvetica, sans-serif; */
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -15,27 +21,40 @@ nav {
 
 header {
     flex-basis: 100%;
+    display: flex;
 }
 
 header h1 {
+    font-size: 2.5em;
     box-sizing: initial;
+    flex-basis: 70%;
 }
 
 header nav {
+    display:flex;
+    align-items: flex-end;
     text-align: right;
-    display: inline;
+    flex-basis: 30%;
 }
 
-body nav {
-    flex-basis: 20%;
-}
-
-body main {
-    flex-basis: 80%;
+header nav ul {
+    display: flex;
+    text-align: right;
+    align-items: flex-end;
+    list-style: none;
 }
 
 header nav ul li {
-    display: inline;
+    margin: 0 0.5em;
+}
+
+
+body > nav {
+    flex-basis: 20%;
+}
+
+body > main {
+    flex-basis: 80%;
 }
 
 footer {
