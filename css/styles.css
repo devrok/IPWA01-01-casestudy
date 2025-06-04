@@ -52,6 +52,7 @@ header nav ul li {
 body > nav {
   flex-basis: 20%;
   padding: 0;
+  border-right: lightgrey solid 1px;
   /* background-color: var(--maingreen); */
 }
 
@@ -75,15 +76,18 @@ body > nav > ul > li > a:hover {
 
 main {
   flex-basis: 80%;
+  min-height: 800px;
   padding: 1rem;
 }
 
 main h1 {
-    color: var(--mainblue);
+    /* color: var(--mainblue); */
+    color: white;
 }
 
 footer {
   flex-basis: 100%;
+  border-top: lightgrey solid 1px;
 }
 
 footer nav ul {
@@ -92,4 +96,24 @@ footer nav ul {
 footer nav ul li {
   list-style-image: none;
   display: inline;
+}
+
+.hero-image {
+  background-image: url("/img/banner.png");
+  margin: 0;
+  max-width: 100%;
+  height: auto;
+
+
+  /* Set a specific height */
+  /* height: 60%; */
+    /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  text-align: center;
+  /* vertical-align: ; */
+  align-content: center;
 }
