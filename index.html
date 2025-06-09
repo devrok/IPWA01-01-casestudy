@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="img/logo64x64.ico">
 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- datatables.net -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
     <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- my scripts -->
     <script type="text/javascript" src="/src/scripts.js">
@@ -63,7 +64,7 @@
         </ul>
     </nav>
     <main>
-        
+
         <div class="hero-image">
             <!-- <h1>"Tracking Emissions. Taking the Challenge."</h1> -->
             <h1>Tracking emissions.</h1>
@@ -119,7 +120,7 @@
                 </div>
             </div>
         </div> -->
-        
+
         <!-- content  -->
         <button type="button" onclick="loadData()">load</button>
         <div>
@@ -155,24 +156,26 @@
     </footer>
 </body>
 <script>
-        function loadData() {
-            alert("Test");
+    function loadData() {
+        alert("Test");
+        const table = document.querySelector('#data tbody');
 
-            var data = getDataItems2();
-          
-            const table = document.querySelector('#data tbody');
-            data.slice(0, 100).array.forEach(row => {
+        //let data = getDataItems();
+
+        getDataItems().then(data => {
+            data.slice(0, 100).forEach(row => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                    <td>{$row.Entity}</td>
-                    <td>{$row.Code}</td>
-                    <td>{$row.Year}</td>
-                    <td>{$row.emissions_billiontons}</td>
+                    <td>${row.Entity}</td>
+                    <td>${row.Code}</td>
+                    <td>${row.Year}</td>
+                    <td>${row.emissions_billiontons}</td>
                 `;
                 table.appendChild(tr);
             });
-        
-        }
-    
+        });
+    }
+
 </script>
+
 </html>
