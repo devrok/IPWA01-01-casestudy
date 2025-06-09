@@ -156,24 +156,43 @@
     </footer>
 </body>
 <script>
+    // import DataTable from 'https://cdn.datatables.net/2.3.2/js/dataTables.js';
+
     function loadData() {
         alert("Test");
-        const table = document.querySelector('#data tbody');
+
+        let table = new DataTable('#data', {
+            "paging": true,
+            "searching": true,
+            "info": true,
+            "lengthChange": true,
+            "pageLength": 10,
+            "order": [[2, 'desc']],
+            "columnDefs": [{
+                "targets": [0, 1, 2, 3],
+                "className": 'dt-body-center'
+            }]
+        });
+        
+        table.loadData({
+            dataSrc: getDataItems() // Specify the data source
+        });
 
         //let data = getDataItems();
 
-        getDataItems().then(data => {
-            data.slice(0, 100).forEach(row => {
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${row.Entity}</td>
-                    <td>${row.Code}</td>
-                    <td>${row.Year}</td>
-                    <td>${row.emissions_billiontons}</td>
-                `;
-                table.appendChild(tr);
-            });
-        });
+        // const table = document.querySelector('#data tbody');
+        // getDataItems().then(data => {
+        //     data.slice(0, 100).forEach(row => {
+        //         const tr = document.createElement('tr');
+        //         tr.innerHTML = `
+        //             <td>${row.Entity}</td>
+        //             <td>${row.Code}</td>
+        //             <td>${row.Year}</td>
+        //             <td>${row.emissions_billiontons}</td>
+        //         `;
+        //         table.appendChild(tr);
+        //     });
+        // });
     }
 
 </script>
