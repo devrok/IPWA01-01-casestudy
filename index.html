@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="img/logo64x64.ico">
+
+    <!-- datatables.net -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- my scripts -->
+    <script type="text/javascript" src="/src/scripts.js">
+
+    </script>
+
     <title>Carbon Challenge</title>
 </head>
 
@@ -58,7 +70,7 @@
             <h1>Taking the challenge.</h1>
 
         </div>
-        <div>
+        <!-- <div>
             <h2>Übersicht</h2>
             <input type="text" placeholder="Suchen und Filtern ..." />
             <button>Go</button>
@@ -106,6 +118,22 @@
                     </table>
                 </div>
             </div>
+        </div> -->
+        
+        <!-- content  -->
+        <button type="button" onclick="loadData()">load</button>
+        <div>
+            <table id="data">
+                <thead>
+                    <tr>
+                        <th>Land</th>
+                        <th>ISO Code</th>
+                        <th>Jahr</th>
+                        <th>Emissionen (Mrd. t)</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
     </main>
 
@@ -126,5 +154,25 @@
         </nav>
     </footer>
 </body>
+<script>
+        function loadData() {
+            alert("Test");
 
+            var data = getDataItems2();
+          
+            const table = document.querySelector('#data tbody');
+            data.slice(0, 100).array.forEach(row => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td>{$row.Entity}</td>
+                    <td>{$row.Code}</td>
+                    <td>{$row.Year}</td>
+                    <td>{$row.emissions_billiontons}</td>
+                `;
+                table.appendChild(tr);
+            });
+        
+        }
+    
+</script>
 </html>
