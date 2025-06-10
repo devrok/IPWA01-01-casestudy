@@ -124,7 +124,7 @@
         <!-- content  -->
         <button type="button" onclick="loadData()">load</button>
         <div>
-            <table id="data">
+            <!-- <table id="data">
                 <thead>
                     <tr>
                         <th>Land</th>
@@ -134,7 +134,8 @@
                     </tr>
                 </thead>
                 <tbody></tbody>
-            </table>
+            </table> -->
+            <table id="data" width="100%"></table>
         </div>
     </main>
 
@@ -159,24 +160,55 @@
     // import DataTable from 'https://cdn.datatables.net/2.3.2/js/dataTables.js';
 
     function loadData() {
-        alert("Test");
+        // alert("Test");
 
         let table = new DataTable('#data', {
             "paging": true,
             "searching": true,
             "info": true,
             "lengthChange": true,
-            "pageLength": 10,
-            "order": [[2, 'desc']],
+            "pageLength": 30,
+            "order": [[0, 'desc']],
+            "columns": [
+                { "title": "Land", "data": "Entity" },
+                { "title": "ISO", "data": "Code" },
+                { "title": "Jahr", "data": "Year" },
+                { "title": "Emissionen (t)", "data": "emissions_billiontons" }
+            ],
+            "data": [], // Initially empty, will be filled with data later
             "columnDefs": [{
-                "targets": [0, 1, 2, 3],
+                "targets": [0],
+                "width": "50%",
+                "className": 'dt-body-left'
+            }, {
+                "targets": [1],
+                "width": "10%",
                 "className": 'dt-body-center'
-            }]
+            }, {
+                "targets": [2],
+                "width": "10%",
+                "className": 'dt-body-center'
+            }, {
+                "targets": [3],
+                "width": "30%",
+                "className": 'dt-body-right',
+                "render": $.fn.dataTable.render.number(',', '.', 0, '', ' t') // Format numbers in the last column`;
+            }
+            ],
+            // ajax: getDataItems(), // Specify the data source
+            //ajax: '/data/countries.json', // Specify the data source
         });
-        
-        table.loadData({
-            dataSrc: getDataItems() // Specify the data source
+
+        getDataItems().then(data => {
+            console.log(data);
+            table.rows.add(data) // Add data to the table
+                .draw(); // Redraw the table
+            //table.data = data; // Specify the data source
         });
+
+        // table.loadData({
+        //     dataSrc: getDataItems() // Specify the data source
+        // });
 
         //let data = getDataItems();
 

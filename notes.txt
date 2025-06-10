@@ -1,0 +1,16 @@
+TODO:
+
+- ISO Code: OWID_WRL entfernen
+- leeren Table anzeigen
+- beim Befüllen die aktuellen Daten löschen (clear?) und neu dazu
+- switchen zwischen Companies und Countries
+- besser trennen
+
+- hero-image!
+- bootstrap -> responsive
+- vue
+
+x Spaltenbreite
+x Formatierung der Zahlen -> nur in Tonnen
+    * Austria 58.58 Millionen Tonnen
+    * China   11.45 Milliarden Tonnen
