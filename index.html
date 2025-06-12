@@ -22,7 +22,7 @@
     <title>Carbon Challenge</title>
 </head>
 
-<body>
+<body onload="init();">
     <header>
         <img src="img/logo.png" style="height: 10em; width: 10em; object-fit: cover;">
         <h1>
@@ -159,9 +159,12 @@
 <script>
     // import DataTable from 'https://cdn.datatables.net/2.3.2/js/dataTables.js';
 
-    function loadData() {
-        // alert("Test");
+    function init() {
+        // Initialize the DataTable
+        initDataTable();
+    }
 
+    function initDataTable() {
         let table = new DataTable('#data', {
             "paging": true,
             "searching": true,
@@ -195,10 +198,66 @@
                 "render": $.fn.dataTable.render.number(',', '.', 0, '', ' t') // Format numbers in the last column`;
             }
             ],
+            language: {
+                data: {
+                    empty: "Keine Daten verfügbar"
+                },
+            },
+            lengthMenu: [10, 30, 50, 100],
+            
             // ajax: getDataItems(), // Specify the data source
             //ajax: '/data/countries.json', // Specify the data source
         });
+    }
 
+    function loadData() {
+        // alert("Test");
+
+        /*
+        let table = new DataTable('#data', {
+            "paging": true,
+            "searching": true,
+            "info": true,
+            "lengthChange": true,
+            "pageLength": 30,
+            "order": [[0, 'desc']],
+            "columns": [
+                { "title": "Land", "data": "Entity" },
+                { "title": "ISO", "data": "Code" },
+                { "title": "Jahr", "data": "Year" },
+                { "title": "Emissionen (t)", "data": "emissions_billiontons" }
+            ],
+            "data": [], // Initially empty, will be filled with data later
+            "columnDefs": [{
+                "targets": [0],
+                "width": "50%",
+                "className": 'dt-body-left'
+            }, {
+                "targets": [1],
+                "width": "10%",
+                "className": 'dt-body-center'
+            }, {
+                "targets": [2],
+                "width": "10%",
+                "className": 'dt-body-center'
+            }, {
+                "targets": [3],
+                "width": "30%",
+                "className": 'dt-body-right',
+                "render": $.fn.dataTable.render.number(',', '.', 0, '', ' t') // Format numbers in the last column`;
+            }
+            ],
+            language: {
+                data: {
+                    empty: "Keine Daten verfügbar"
+                },
+            },
+            lengthMenu: [10, 30, 50, 100],
+            
+        });
+        */
+
+        let table = $('#data').DataTable(); // Get the DataTable instance
         getDataItems().then(data => {
             console.log(data);
             table.rows.add(data) // Add data to the table

@@ -1,5 +1,9 @@
 TODO:
 
+x trennen der Funktionen
+    x DataTable initialisieren
+    x exitierenden DataTable auswählen
+    x Daten in DataTable laden
 - ISO Code: OWID_WRL entfernen
 - leeren Table anzeigen
 - beim Befüllen die aktuellen Daten löschen (clear?) und neu dazu
