@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Challenge - Kontakt</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <header class="container-fluid py-3 px-3">
+        <div class="row">
+            <div class="col-12 col-sm-6 mb-3 mb-sm-0 d-flex flex-row align-items-center">
+                <a href="../">
+                    <img src="../assets/img/logo.png" alt="Carbon Challenge Logo" class="img-fluid mb-2"
+                        style="max-width: 100px; height: auto;">
+                </a>
+                <h1>
+                    <span>Carbon</span><br>
+                    <span>Challenge</span>
+                </h1>
+            </div>
+            <div class="col-12 col-sm-6 mb-2 mb-sm-0">
+                <nav class="nav flex-column flex-sm-row mb-0 justify-content-sm-end align-items-sm-end"
+                    style="height: 100%;">
+
+                    <form class="d-flex" role="search" aria-label="Suche" id="searchForm">
+                        <input class="form-control me-2" type="text" placeholder="Suche ..." aria-label="Suchbegriff"
+                            id="searchInput" required />
+                        <button class="btn custom-db-button-green" type="submit" aria-label="Suchen">Suchen</button>
+                    </form>
+
+                    <ul class="nav d-flex flex-column flex-sm-row align-items-sm-center">
+                        <li class="nav-item"><a class="nav-link" target="_blank"
+                                href="https://instagram.com">Instagram</a></li>
+                        <li class="nav-item"><a class="nav-link" target="_blank"
+                                href="https://facebook.com">Facebook</a></li>
+                        <li class="nav-item"><a class="nav-link" target="_self"" href=" #">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid d-flex flex-column align-items-left">
+        <!-- Search Result -->
+        <div id="searchResult" class="mt-4 alert alert-info" role="alert" style="display: none;">
+        </div>
+
+        <div class="col-12 py-3 px-3">
+            <h1>Kontakt</h1>
+
+            <p>Du hast Fragen, Anregungen oder möchtest mit uns zusammenarbeiten? Schreib uns gerne!</p>
+
+            <form id="contactForm" action="#" method="post" class="d-flex flex-column gap-3">
+                <label for="name">Dein Name</label>
+                <input type="text" id="name" name="name" placeholder="Dein Name ..." required />
+
+                <label for="email">Deine E-Mail-Adresse</label>
+                <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse ..." required />
+
+                <label for="message">Nachricht</label>
+                <textarea id="message" name="message" rows="6" placeholder="Deine Nachricht ..." required></textarea>
+
+                <p class="note">
+                    Mit dem Absenden erklärst Du Dich mit der Verarbeitung Deiner Daten gemäß unserer
+                    <a href="../privacy/">Datenschutzerklärung</a> einverstanden.
+                </p>
+
+                <button class="btn custom-db-button-green fs-2" type="submit">Absenden</button>
+                <!-- zur Darstellung von Meldungen -->
+                <!-- <div id="formMessages" class="text-success" style="display: none; margin-top: 0em">
+                </div> -->
+                <!-- Toast Container zentriert -->
+                <!-- <div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 1055;"> -->
+                <div class="position-fixed top-50 start-50 translate-middle p-2" style="z-index: 1055;"></div>
+                <div id="formToast" class="toast align-items-center text-bg-success border-0" role="alert"
+                    aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            Deine Nachricht wurde erfolgreich gesendet!
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                            aria-label="Close"></button>
+                    </div>
+                </div>
+        </div>
+
+        </form>
+
+        <p style="margin-top:2rem;">
+            Oder sende uns eine E-Mail an <a
+                href="mailto:kontakt@carbon-challenge.at">kontakt@carbon-challenge.at</a><br>
+            📞 +43 (0)1 23456789
+        </p>
+        </div>
+    </main>
+
+    <footer class="container-fluid py-3 px-3">
+        <nav class="nav justify-content-center">
+            <ul class="nav d-flex flex-column flex-sm-row justify-content-center align-items-sm-center">
+                <li class="nav-item">
+                    <span>&copy; 2025 Carbon Challenge</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_self" href="../privacy/">Datenschutz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_self" href="../terms/">Impressum</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- extern -->
+
+    <!-- Bootstrap CSS and JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- intern -->
+     
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="js/events.js"></script>
+</body>
+
+</html>

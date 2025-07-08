@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Challenge - Datenschutz</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+
+<body>
+    <header class="container-fluid py-3 px-3">
+        <div class="row">
+            <div class="col-12 col-sm-6 mb-3 mb-sm-0 d-flex flex-row align-items-center">
+                <a href="../">
+                    <img src="../assets/img/logo.png" alt="Carbon Challenge Logo" class="img-fluid mb-2"
+                        style="max-width: 100px; height: auto;">
+                </a>
+                <h1>
+                    <span>Carbon</span><br>
+                    <span>Challenge</span>
+                </h1>
+            </div>
+            <div class="col-12 col-sm-6 mb-2 mb-sm-0">
+                <nav class="nav flex-column flex-sm-row mb-0 justify-content-sm-end align-items-sm-end"
+                    style="height: 100%;">
+
+                    <form class="d-flex" role="search" aria-label="Suche" id="searchForm">
+                        <input class="form-control me-2" type="text" placeholder="Suche ..." aria-label="Suchbegriff"
+                            id="searchInput" required />
+                        <button class="btn custom-db-button-green" type="submit" aria-label="Suchen">Suchen</button>
+                    </form>
+
+                    <ul class="nav d-flex flex-column flex-sm-row align-items-sm-center">
+                        <li class="nav-item"><a class="nav-link" target="_blank"
+                                href="https://instagram.com">Instagram</a></li>
+                        <li class="nav-item"><a class="nav-link" target="_blank"
+                                href="https://facebook.com">Facebook</a></li>
+                        <li class="nav-item"><a class="nav-link" target="_self"" href=" ../contact/">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid  d-flex flex-column text-left py-3 px-3">
+        <!-- Search Result -->
+        <div id="searchResult" class="mt-4 alert alert-info" role="alert" style="display: none;">
+        </div>
+
+        <h1>Datenschutzerklärung</h1>
+
+        <p>Der Schutz Deiner personenbezogenen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Deine Daten
+            ausschließlich auf Grundlage der DSGVO und des österreichischen Datenschutzgesetzes (DSG).</p>
+
+        <h2>1. Verantwortlicher</h2>
+        <p>Carbon Challenge – Verein für Klima- und Umwelttransparenz<br>
+            Musterstraße 12, 1010 Wien, Österreich<br>
+            E-Mail: <a href="mailto:datenschutz@carbon-challenge.at">datenschutz@carbon-challenge.at</a></p>
+
+        <h2>2. Zugriffsdaten</h2>
+        <p>Beim Besuch dieser Website werden automatisch Daten wie IP-Adresse, Datum und Uhrzeit, Browsertyp und
+            Betriebssystem erfasst. Diese Daten werden ausschließlich zur technischen Sicherheit und Analyse verwendet.
+        </p>
+
+        <h2>3. Kontaktaufnahme</h2>
+        <p>Wenn Du uns per E-Mail oder Formular kontaktierst, speichern wir Deine Angaben zur Bearbeitung Deiner
+            Anfrage. Deine Daten werden nicht ohne Deine Zustimmung weitergegeben.</p>
+
+        <h2>4. Cookies</h2>
+        <p>Unsere Seite verwendet nur technisch notwendige Cookies. Es erfolgt keine Nutzung zu Werbezwecken oder
+            Analysezwecken.</p>
+
+        <h2>5. Deine Rechte</h2>
+        <p>Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit
+            gemäß DSGVO. Beschwerden kannst Du bei der Datenschutzbehörde unter <a
+                href="https://www.dsb.gv.at">www.dsb.gv.at</a> einbringen.</p>
+
+        <h2>6. Änderungen</h2>
+        <p>Diese Datenschutzerklärung wird regelmäßig aktualisiert. Stand: Juni 2025</p>
+
+    </main>
+
+    <footer class="container-fluid py-3 px-3">
+        <nav class="nav justify-content-center">
+            <ul class="nav d-flex flex-column flex-sm-row justify-content-center align-items-sm-center">
+                <li class="nav-item">
+                    <span>&copy; 2025 Carbon Challenge</span>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_self" href="#top">Datenschutz</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" target="_self" href="../terms/">Impressum</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <!-- extern -->
+
+    <!-- Bootstrap CSS and JS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <!-- intern -->
+     
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="js/events.js"></script>
+</body>
+
+</html>
