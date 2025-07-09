@@ -7,6 +7,9 @@ document
     });
 
 document.addEventListener("DOMContentLoaded", async () => {
+    window.changeDirectionOfElement("#dirContainerId");
+    console.log("site loaded");
+
     // lade Daten aus den JSON-Dateien
     const countriesData = await window.loadData("../data/countries.json");
     const companiesData = await window.loadData("../data/companies.json");

@@ -19,13 +19,13 @@ function getElementById(elementId) {
 window.getElementById = getElementById;
 
 /*
- * Retrieves the preferred language of the browser.
+ * Retrieves the display language of the current site.
  * If no language is set, it defaults to "de-DE".
  * @returns {string} - The preferred language code.
  */
 function getLanguage() {
-    // Hole die bevorzugte Sprache des Browsers
-    const language = navigator.language || "de-DE";
+    // Ermittle die Sprache, in welcher die Seite angezeigt wird
+    const language = document.documentElement.lang|| "de-DE";
     return language;
 }
 window.getLanguage = getLanguage;

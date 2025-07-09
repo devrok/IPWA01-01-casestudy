@@ -5,7 +5,11 @@ TODO
     - Prüfen https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
         speziell Safe Sinks
             
-    x 
+    x rtl testen:
+        1. im Browser Breakpoint in getLanguage setzen
+        2. Seite neu laden
+        3. im Browser Inspektor lang="de" auf lang="ar" setzen
+        4. Debugger laufen lassen
     x Contact: escapen VOR dem submit fixen
     x vereinheitlichen:
         x scripts am Ende des <body> Elements verlinken
