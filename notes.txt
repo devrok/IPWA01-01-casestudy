@@ -2,6 +2,15 @@ TODO
     > Menü abhängig von Sprache rechts oder links anordnen!
 
     - beispielhaft Tests!
+        installieren
+            - npm install --save-dev mocha
+            - npm install --save-dev jsdom
+            ANMERKUNG:
+                Installation "lokal" für Projekt erfolgt in Folder "node_modules".
+                Der gesamte Folder 
+
+        ausführen
+            - npx mocha tests/utils.test.js
     - Prüfen https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
         speziell Safe Sinks
             
