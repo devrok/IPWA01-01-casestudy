@@ -21,6 +21,11 @@ header h1 {
   color: var(--maingreen);
 }
 
+.logo-img {
+  max-width: 100px;
+  height: auto;
+}
+
 aside {
   background-color: #aec6cf;
   /* padding: 1em; */
