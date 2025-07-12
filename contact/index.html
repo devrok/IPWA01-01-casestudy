@@ -43,50 +43,46 @@
         </div>
     </header>
 
-    <main class="container-fluid d-flex flex-column align-items-left">
+    <main class="ccontainer-fluid d-flex flex-column align-items-left py-3 px-3">
         <!-- Search Result -->
         <div id="searchResult" class="mt-4 alert alert-info" role="alert" style="display: none;">
         </div>
 
-        <div class="col-12 py-3 px-3">
-            <h1>Kontakt</h1>
+        <h1>Kontakt</h1>
+        <p>Du hast Fragen, Anregungen oder möchtest mit uns zusammenarbeiten? Schreib uns gerne!</p>
 
-            <p>Du hast Fragen, Anregungen oder möchtest mit uns zusammenarbeiten? Schreib uns gerne!</p>
+        <form id="contactForm" action="#" method="post" class="d-flex flex-column gap-3">
+            <label for="name">Dein Name</label>
+            <input type="text" id="name" name="name" placeholder="Dein Name ..." required />
 
-            <form id="contactForm" action="#" method="post" class="d-flex flex-column gap-3">
-                <label for="name">Dein Name</label>
-                <input type="text" id="name" name="name" placeholder="Dein Name ..." required />
+            <label for="email">Deine E-Mail-Adresse</label>
+            <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse ..." required />
 
-                <label for="email">Deine E-Mail-Adresse</label>
-                <input type="email" id="email" name="email" placeholder="Deine E-Mail-Adresse ..." required />
+            <label for="message">Nachricht</label>
+            <textarea id="message" name="message" rows="6" placeholder="Deine Nachricht ..." required></textarea>
 
-                <label for="message">Nachricht</label>
-                <textarea id="message" name="message" rows="6" placeholder="Deine Nachricht ..." required></textarea>
+            <p class="note">
+                Mit dem Absenden erklärst Du Dich mit der Verarbeitung Deiner Daten gemäß unserer
+                <a href="../privacy/">Datenschutzerklärung</a> einverstanden.
+            </p>
 
-                <p class="note">
-                    Mit dem Absenden erklärst Du Dich mit der Verarbeitung Deiner Daten gemäß unserer
-                    <a href="../privacy/">Datenschutzerklärung</a> einverstanden.
-                </p>
-
-                <button class="btn custom-db-button-green fs-2" type="submit">Absenden</button>
-                <!-- zur Darstellung von Meldungen -->
-                <!-- <div id="formMessages" class="text-success" style="display: none; margin-top: 0em">
+            <button class="btn custom-db-button-green fs-2" type="submit">Absenden</button>
+            <!-- zur Darstellung von Meldungen -->
+            <!-- <div id="formMessages" class="text-success" style="display: none; margin-top: 0em">
                 </div> -->
-                <!-- Toast Container zentriert -->
-                <!-- <div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 1055;"> -->
-                <div class="position-fixed top-50 start-50 translate-middle p-2" style="z-index: 1055;"></div>
-                <div id="formToast" class="toast align-items-center text-bg-success border-0" role="alert"
-                    aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                        <div class="toast-body">
-                            Deine Nachricht wurde erfolgreich gesendet!
-                        </div>
-                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
-                            aria-label="Close"></button>
+            <!-- Toast Container zentriert -->
+            <!-- <div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 1055;"> -->
+            <div class="position-fixed top-50 start-50 translate-middle p-2" style="z-index: 1055;"></div>
+            <div id="formToast" class="toast align-items-center text-bg-success border-0" role="alert"
+                aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Deine Nachricht wurde erfolgreich gesendet!
                     </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
                 </div>
-        </div>
-
+            </div>
         </form>
 
         <p style="margin-top:2rem;">
@@ -94,7 +90,6 @@
                 href="mailto:kontakt@carbon-challenge.at">kontakt@carbon-challenge.at</a><br>
             📞 +43 (0)1 23456789
         </p>
-        </div>
     </main>
 
     <footer class="container-fluid py-3 px-3">
@@ -123,7 +118,7 @@
         crossorigin="anonymous"></script>
 
     <!-- intern -->
-     
+
     <script src="../assets/js/utils.js"></script>
     <script src="../assets/js/search.js"></script>
     <script src="js/events.js"></script>

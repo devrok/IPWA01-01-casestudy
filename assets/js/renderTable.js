@@ -72,10 +72,10 @@ function createOptionsCountries(dataSource) {
 
 function createOptionsCompanies(dataSource) {
     const numberFormatter = new Intl.NumberFormat(window.getLanguage());
-    const headers = ["Land", "Unternehmen", "Jahr", "CO₂ (Mio. t)"];
+    const headers = ["Unternehmen", "Land", "Jahr", "CO₂ (Mio. t)"];
     const data = dataSource.map(row => [
-        row.Country,
         row.parent_entity,
+        row.Country,
         row.year,
         numberFormatter.format(row.total_emissions_MtCO2e)
     ]);
