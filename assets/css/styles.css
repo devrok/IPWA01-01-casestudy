@@ -26,6 +26,21 @@ header h1 {
   height: auto;
 }
 
+body{
+  min-height: 100vh;
+}
+
+#mainContent,
+#mainContent > .row {
+    min-height: calc(100vh - 137px - 73px);
+    height: 100%;
+}
+
+#mainContent > .row > aside,
+#mainContent > .row > main {
+    min-height: 100%;
+}
+
 aside {
   background-color: #aec6cf;
   /* padding: 1em; */
@@ -40,7 +55,8 @@ main {
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: auto;
+  /* height: auto; */
+  min-height: 100%;
 }
 
 footer {
