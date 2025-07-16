@@ -1,7 +1,9 @@
 
 let dataTableInstance = null;
-
-// export function initializeDataTable(selectedDataType) {
+/*
+ * Funktion um eine DataTable zu initialisieren
+ * @param {string} selectedDataType - Der Typ der Daten, die angezeigt werden sollen
+ */
 function initializeDataTable(selectedDataType) {
     destroyDataTable();
 
@@ -9,12 +11,16 @@ function initializeDataTable(selectedDataType) {
         ? createOptionsCompanies([])
         : createOptionsCountries([]);
 
-    //dataTableInstance = new DataTable("#dataTable", options);
     dataTableInstance = new simpleDatatables.DataTable("#dataTable", options);
 }
 window.initializeDataTable = initializeDataTable;
 
-// export async function renderTable(selectedDataType, selectedYear, data) {
+/*
+ * Funktion um die Tabelle mit den Daten zu rendern
+ * @param {string} selectedDataType - Der Typ der Daten, die angezeigt werden sollen
+ * @param {string} selectedYear - Das ausgewählte Jahr
+ * @param {Array} data - Die Daten, die in der Tabelle angezeigt werden sollen
+ */
 async function renderTable(selectedDataType, selectedYear, data) {
     destroyDataTable();
 
@@ -26,7 +32,6 @@ async function renderTable(selectedDataType, selectedYear, data) {
         ? createOptionsCountries(filteredData)
         : createOptionsCompanies(filteredData);
 
-    //dataTableInstance = new DataTable("#dataTable", options);
     dataTableInstance = new simpleDatatables.DataTable("#dataTable", options);
 }
 window.renderTable = renderTable;

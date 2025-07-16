@@ -1,4 +1,7 @@
-//export async function loadData(jsonFile) {
+/*
+ * Funktion um JSON-Daten asynchron zu laden
+ * @param {string} jsonFile - Der Pfad zur JSON-Datei
+ */
  async function loadData(jsonFile) {
     try {
         const response = await fetch(jsonFile);

@@ -1,3 +1,6 @@
+/*
+ * In eine Funktion ausgelagerte Event-Listener für die Suche
+ */
 function eventListenerSearch() {
     const searchInput = window.getElementById("searchInput");
     const escapedSearchTerm = window.escapeHtml(searchInput.value.trim());
