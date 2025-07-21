@@ -68,7 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // nur Eingabefelder des Formulars
     const inputs = form.querySelectorAll("input, textarea");
     const submitButton = form.querySelector("button[type='submit']");
-    //const formMessages = document.getElementById("formMessages");
 
     inputs.forEach((input) => {
         input.addEventListener("blur", () => {
